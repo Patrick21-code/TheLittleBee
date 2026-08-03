@@ -12,5 +12,9 @@ public class ObstacleMover : MonoBehaviour
     void Update()
     {
         transform.position += Vector3.left * speed * Time.deltaTime; //delta time to make it frame independent
+        if (transform.position.x < -10f)
+        {
+            Destroy(gameObject); //basically means me
+        }
     }
 }
