@@ -5,7 +5,10 @@ public class ObstacleSpawner : MonoBehaviour
     //Every Prefab is a GameObject, so we can use GameObject type to store the prefab reference
     public GameObject obstaclePrefab;
     public float spawnRate = 2f; //Spawns object every 2 seconds
+    public float heightOffset = 2f;
     private float timer = 0f;
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,7 +22,13 @@ public class ObstacleSpawner : MonoBehaviour
 
         if (timer >= spawnRate)
         {
-            Instantiate(obstaclePrefab, transform.position, Quaternion.identity); //Quaternion.identity means no rotation
+            float randomY = Random.Range(-heightOffset, heightOffset);
+
+            Vector3 spawnPosition = transform.position;
+            spawnPosition.y += randomY;
+
+            Instantiate(obstaclePrefab, spawnPosition, Quaternion.identity); //Quaternion.identity means no rotation
+            
             timer = 0f;
         }
     }

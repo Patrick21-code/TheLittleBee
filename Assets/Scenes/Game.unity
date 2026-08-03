@@ -267,7 +267,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 641320850}
-  - component: {fileID: 641320849}
   - component: {fileID: 641320848}
   m_Layer: 0
   m_Name: Spawner
@@ -290,19 +289,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ObstacleSpawner
   obstaclePrefab: {fileID: 8671278266950129404, guid: f55997db07a71be4cbba9e7f67042d11, type: 3}
   spawnRate: 2
---- !u!114 &641320849
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 641320847}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96a9b29c174e27344bb1c604e4968c21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ObstacleMover
-  speed: 3
+  heightOffset: 2
 --- !u!4 &641320850
 Transform:
   m_ObjectHideFlags: 0
