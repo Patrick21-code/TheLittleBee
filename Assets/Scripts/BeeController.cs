@@ -20,7 +20,7 @@ public class BeeController : MonoBehaviour
 
     void MovePlayer()
     {
-        if (Mouse.current.leftButton.wasPressedThisFrame)
+        if (Mouse.current.leftButton.wasPressedThisFrame || Keyboard.current.spaceKey.wasPressedThisFrame)
         {
             // Reset vertical velocity for consistent flap
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0);
