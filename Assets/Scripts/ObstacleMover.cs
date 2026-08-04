@@ -11,6 +11,12 @@ public class ObstacleMover : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (GameManager.gameOver)
+        {
+            return;
+        }
+        
         transform.position += Vector3.left * speed * Time.deltaTime; //delta time to make it frame independent
         if (transform.position.x < -10f)
         {
