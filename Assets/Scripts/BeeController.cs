@@ -30,4 +30,10 @@ public class BeeController : MonoBehaviour
         }
         
     }
+
+    //Collision2D collision contains information about what you hit
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log("Game Over");
+    }
 }
