@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class BeeController : MonoBehaviour
 {
-    Rigidbody2D rb;
+    private Rigidbody2D rb;
     public float flapStrength = 5f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -35,5 +35,6 @@ public class BeeController : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("Game Over");
+        rb.simulated = false; //stop physics for this Rigidbody
     }
 }
