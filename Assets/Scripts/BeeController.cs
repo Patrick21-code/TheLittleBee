@@ -35,6 +35,8 @@ public class BeeController : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("Game Over");
+
+        GameManager.gameOver = true; //set the static variable to true, so everyone knows the game is over
         rb.simulated = false; //stop physics for this Rigidbody
     }
 }
