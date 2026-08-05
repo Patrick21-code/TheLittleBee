@@ -21,7 +21,6 @@ public class ScoreZone : MonoBehaviour
      if (collision.CompareTag("Player"))
         {
             GameManager.score++;
-            Debug.Log("Score: " + GameManager.score);
         }   
     }
 }
