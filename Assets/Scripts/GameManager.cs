@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using UnityEngine.SceneManagement; //lets us load scenes
 public class GameManager : MonoBehaviour
 {
     //instead of each object having its own gameOver, everyone checks the same one
@@ -22,5 +22,10 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); //reloads the current scene
     }
 }
