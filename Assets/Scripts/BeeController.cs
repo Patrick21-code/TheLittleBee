@@ -4,8 +4,8 @@ using UnityEngine.InputSystem;
 public class BeeController : MonoBehaviour
 {
     private Rigidbody2D rb;
+    private SpriteRenderer sr;
     public float flapStrength = 5f;
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -28,10 +28,10 @@ public class BeeController : MonoBehaviour
             
             // Apply uniform upward force
             rb.AddForce(Vector2.up * flapStrength, ForceMode2D.Impulse);
+
         }
         
     }
-
     void RotateBee()
     {
         float verticalSpeed = rb.linearVelocity.y;
