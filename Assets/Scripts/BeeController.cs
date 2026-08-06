@@ -37,7 +37,6 @@ public class BeeController : MonoBehaviour
     void RotateBee()
     {
         float verticalSpeed = rb.linearVelocity.y;
-        Debug.Log("Vertical Speed: " + verticalSpeed);
         
         //Clamp for example is score must stay between -45 and 35 degrees, so if the bee is falling too fast, it won't rotate more than -45 degrees
         float angle = Mathf.Clamp(verticalSpeed * 5f, -45f, 35f); // Adjust the multiplier for desired rotation sensitivity
