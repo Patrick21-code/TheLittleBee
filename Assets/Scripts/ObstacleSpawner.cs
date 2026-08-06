@@ -5,7 +5,7 @@ public class ObstacleSpawner : MonoBehaviour
     //Every Prefab is a GameObject, so we can use GameObject type to store the prefab reference
     public GameObject obstaclePrefab;
     public float spawnRate = 1.75f; //Spawns object every 2 seconds
-    public float heightOffset = 2f;
+    public float heightOffset = 2.5f;
     private float timer = 0f;
 
 
