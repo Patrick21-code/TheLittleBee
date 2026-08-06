@@ -4,12 +4,13 @@ using UnityEngine.InputSystem;
 public class BeeController : MonoBehaviour
 {
     private Rigidbody2D rb;
-    private SpriteRenderer sr;
+    private Animator animator;
     public float flapStrength = 5f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -29,6 +30,7 @@ public class BeeController : MonoBehaviour
             // Apply uniform upward force
             rb.AddForce(Vector2.up * flapStrength, ForceMode2D.Impulse);
 
+            animator.SetTrigger("Flap"); // Trigger the flap animation
         }
         
     }
