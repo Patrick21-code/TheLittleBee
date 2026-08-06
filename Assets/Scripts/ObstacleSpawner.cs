@@ -4,7 +4,7 @@ public class ObstacleSpawner : MonoBehaviour
 {
     //Every Prefab is a GameObject, so we can use GameObject type to store the prefab reference
     public GameObject obstaclePrefab;
-    public float spawnRate = 2f; //Spawns object every 2 seconds
+    public float spawnRate = 1.75f; //Spawns object every 2 seconds
     public float heightOffset = 2f;
     private float timer = 0f;
 
@@ -24,6 +24,7 @@ public class ObstacleSpawner : MonoBehaviour
         }
         
         timer += Time.deltaTime;
+        Debug.Log("Timer: " + timer); // Log the timer value for debugging
 
         if (timer >= spawnRate)
         {
