@@ -39,7 +39,12 @@ public class BeeController : MonoBehaviour
         
         //Clamp for example is score must stay between -45 and 35 degrees, so if the bee is falling too fast, it won't rotate more than -45 degrees
         float angle = Mathf.Clamp(verticalSpeed * 5f, -45f, 35f); // Adjust the multiplier for desired rotation sensitivity
-        transform.rotation = Quaternion.Euler(0, 0, angle); //
+        transform.rotation = Quaternion.Lerp(
+            transform.rotation, //where you are
+            Quaternion.Euler(0, 0, angle), //where you want to go
+            12f * Time.deltaTime //how fast you move there
+            //multiply by Time.deltaTime to make it framerate independent
+        );
         //ex. Bee jumps = verticalSpeed = 7
         //ex. Bee falls = verticalSpeed = -5
     }
