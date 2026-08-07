@@ -32,7 +32,6 @@ public class BeeController : MonoBehaviour
 
             animator.SetTrigger("Flap"); // Trigger the flap animation
         }
-        
     }
     void RotateBee()
     {
